@@ -32,6 +32,14 @@ class Footer extends React.Component {
           github
         </a>{' '}
         &bull;{' '}
+        Based on Dan Abramov's 
+        <a
+          href="https://github.com/gaearon/overreacted.io"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {' '} Overreacted theme
+        </a>{' '}
       </footer>
     );
   }
