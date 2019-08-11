@@ -24,13 +24,15 @@ class Layout extends React.Component {
     if (location.pathname === rootPath) {
       return (
         <h1
+          className="header-text"
           style={{
             ...scale(0.75),
             marginBottom: 0,
             marginTop: 0,
+            fontFamily: "monospace"
           }}
         >
-          <Link
+          <Link 
             style={{
               boxShadow: 'none',
               textDecoration: 'none',
@@ -46,7 +48,7 @@ class Layout extends React.Component {
       return (
         <h3
           style={{
-            fontFamily: 'Montserrat, sans-serif',
+            fontFamily: 'monospace',
             marginTop: 0,
             marginBottom: 0,
             height: 42, // because
@@ -57,7 +59,7 @@ class Layout extends React.Component {
             style={{
               boxShadow: 'none',
               textDecoration: 'none',
-              color: 'rgb(255, 167, 196)',
+              color: '#21a73',
             }}
             to={'/'}
           >

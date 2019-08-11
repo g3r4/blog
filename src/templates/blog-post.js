@@ -175,9 +175,6 @@ class BlogPostTemplate extends React.Component {
                   Discuss on Twitter
                 </a>
                 {` • `}
-                <a href={editUrl} target="_blank" rel="noopener noreferrer">
-                  Edit on GitHub
-                </a>
               </p>
             </footer>
           </article>
@@ -202,10 +199,11 @@ class BlogPostTemplate extends React.Component {
                 boxShadow: 'none',
                 textDecoration: 'none',
                 color: 'var(--pink)',
+                fontFamily: 'monospace'
               }}
               to={'/'}
             >
-              Overreacted
+              > git revert EARTH
             </Link>
           </h3>
           <Bio />

@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: 'Overreacted',
-    author: 'Dan Abramov',
-    description: 'Personal blog by Dan Abramov. I explain with words and code.',
+    title: '> git revert EARTH',
+    author: 'g3r4',
+    description: "It's Not the End of the World, But I Can See It from Here",
     siteUrl: 'https://overreacted.io',
     social: {
-      twitter: '@dan_abramov',
+      twitter: '@_g3r4',
     },
   },
   pathPrefix: '/',
@@ -126,7 +126,7 @@ module.exports = {
               }
             `,
             output: '/rss.xml',
-            title: "Dan Abramov's Overreacted Blog RSS Feed",
+            title: "g3r4's git revert EARTH Blog RSS Feed",
           },
         ],
       },
