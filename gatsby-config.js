@@ -3,9 +3,10 @@ module.exports = {
     title: '> git revert EARTH',
     author: 'g3r4',
     description: "It's Not the End of the World, But I Can See It from Here",
-    siteUrl: 'https://overreacted.io',
+    siteUrl: 'https://git-revert.earth',
     social: {
       twitter: '@_g3r4',
+      github: 'g3r4'
     },
   },
   pathPrefix: '/',
@@ -80,7 +81,7 @@ module.exports = {
               return allMarkdownRemark.edges.map(edge => {
                 const siteUrl = site.siteMetadata.siteUrl;
                 const postText = `
-                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at overreacted.io. You can read it online by <a href="${siteUrl +
+                <div style="margin-top=55px; font-style: italic;">(This is an article posted to my blog at git-revert.earth. You can read it online by <a href="${siteUrl +
                   edge.node.fields.slug}">clicking here</a>.)</div>
               `;
 
