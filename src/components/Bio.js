@@ -13,7 +13,7 @@ class Bio extends React.Component {
       >
         {/* <img
           src={profilePic}
-          alt={`Dan Abramov`}
+          alt={`Gerardo M`}
           style={{
             marginRight: rhythm(1 / 2),
             marginBottom: 0,
@@ -24,10 +24,11 @@ class Bio extends React.Component {
         /> */}
         <p style={{ maxWidth: 310 }}>
           Personal blog by{' '}
-          <a href="https://mobile.twitter.com/_g3r4">g3r4</a>.{' '}
+          <a href="https://mobile.twitter.com/_g3r4">Gerardo M</a>.{' '}
         </p>
-        <p >
-          You can't go back and change the beginning, but you can start where you are and change how it ends - C.S. Lewis.
+        <p>
+          You can't go back and change the beginning, but you can start where
+          you are and change how it ends - C.S. Lewis.
         </p>
       </div>
     );

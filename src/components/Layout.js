@@ -6,6 +6,7 @@ import Helmet from 'react-helmet';
 import { rhythm, scale } from '../utils/typography';
 import sun from '../assets/sun.png';
 import moon from '../assets/moon.png';
+import Ppm from './Ppm';
 
 class Layout extends React.Component {
   state = {
@@ -29,10 +30,10 @@ class Layout extends React.Component {
             ...scale(0.75),
             marginBottom: 0,
             marginTop: 0,
-            fontFamily: "monospace"
+            fontFamily: 'monospace',
           }}
         >
-          <Link 
+          <Link
             style={{
               boxShadow: 'none',
               textDecoration: 'none',
@@ -139,6 +140,8 @@ class Layout extends React.Component {
               <div style={{ height: '24px' }} />
             )}
           </header>
+          {/* I don't like this: */}
+          {location.pathname === `${__PATH_PREFIX__}/` ? <Ppm /> : ''}
           {children}
         </div>
       </div>

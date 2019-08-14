@@ -1,48 +1,48 @@
 import React from 'react';
 import './Signup.css';
-import toast from 'toasted-notes' 
+import toast from 'toasted-notes';
 import 'toasted-notes/src/styles.css';
 
-import addToMailchimp from 'gatsby-plugin-mailchimp'
+import addToMailchimp from 'gatsby-plugin-mailchimp';
 
 class Signup extends React.Component {
-
   state = {
     name: null,
     email: null,
-}
+  };
 
-_handleChange = (e) => {
+  _handleChange = e => {
     console.log({
-        [`${e.target.name}`]: e.target.value,
+      [`${e.target.name}`]: e.target.value,
     });
     this.setState({
-        [`${e.target.name}`]: e.target.value,
+      [`${e.target.name}`]: e.target.value,
     });
-}
-  
-  _handleSubmit = (e) => {
+  };
+
+  _handleSubmit = e => {
     e.preventDefault();
     console.log('submit', this.state);
-    addToMailchimp(this.state.email, {'FNAME': this.state.name})
-        .then(({ msg, result }) => {
-            console.log('msg', `${result}: ${msg}`);
+    addToMailchimp(this.state.email, { FNAME: this.state.name })
+      .then(({ msg, result }) => {
+        console.log('msg', `${result}: ${msg}`);
 
-            if (result !== 'success') {
-                throw msg;
-            }
-        })
-        .catch((err) => {
-            console.log('err', err);
-            alert(err);
-        });
-    
-  toast.notify('Thank you for subscribing!')
-}
+        if (result !== 'success') {
+          throw msg;
+        }
+      })
+      .catch(err => {
+        console.log('err', err);
+        alert(err);
+      });
 
-  render () {
+    toast.notify('Thank you for subscribing!');
+  };
+
+  render() {
     return (
-      <form onSubmit={this._handleSubmit}
+      <form
+        onSubmit={this._handleSubmit}
         className="seva-form formkit-form"
         method="post"
         id="mc-embedded-subscribe-form"
@@ -51,7 +51,7 @@ _handleChange = (e) => {
         min-width="400 500 600 700 800"
         style={{ backgroundColor: 'rgb(255, 255, 255)', borderRadius: '6px' }}
       >
-      <div data-style="full">
+        <div data-style="full">
           <div
             data-element="column"
             className="formkit-column"
@@ -153,7 +153,7 @@ _handleChange = (e) => {
                 data-element="submit"
                 className="formkit-submit formkit-submit"
                 style={{
-                  backgroundColor: '#21a73d',
+                  backgroundColor: '#387d47',
                   borderRadius: '24px',
                   color: 'white',
                   fontWeight: 700,
@@ -180,7 +180,7 @@ _handleChange = (e) => {
           </div>
         </div>
       </form>
-    )
+    );
   }
 }
 
