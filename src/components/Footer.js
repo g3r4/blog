@@ -31,7 +31,6 @@ class Footer extends React.Component {
         >
           github
         </a>{' '}
-        &bull;{' '}
       </footer>
     );
   }
