@@ -54,7 +54,7 @@ class Translations extends React.Component {
                   <br />
                 </span>
               )}
-              <span>Translated by readers into: </span>
+              <span>Translated into: </span>
               {readerTranslations.map((l, i) => (
                 <React.Fragment key={l}>
                   {l === lang ? (
@@ -74,10 +74,6 @@ class Translations extends React.Component {
               {lang !== 'ru' && (
                 <>
                   <Link to={languageLink('en')}>Read the original</Link>
-                  {' • '}
-                  <a href={editUrl} target="_blank" rel="noopener noreferrer">
-                    Improve this translation
-                  </a>
                   {' • '}
                 </>
               )}
@@ -199,7 +195,7 @@ class BlogPostTemplate extends React.Component {
                 boxShadow: 'none',
                 textDecoration: 'none',
                 color: 'var(--pink)',
-                fontFamily: 'monospace'
+                fontFamily: 'monospace',
               }}
               to={'/'}
             >
