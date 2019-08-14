@@ -116,7 +116,6 @@ exports.createPages = ({ graphql, actions }) => {
             // into this language. We'll replace them before rendering HTML.
             let translatedLinks = [];
             const { langKey } = post.node.fields;
-           
 
             createPage({
               path: post.node.fields.slug,

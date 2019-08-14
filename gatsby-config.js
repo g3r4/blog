@@ -6,7 +6,7 @@ module.exports = {
     siteUrl: 'https://git-revert.earth',
     social: {
       twitter: '@_g3r4',
-      github: 'g3r4'
+      github: 'g3r4',
     },
   },
   pathPrefix: '/',
@@ -163,7 +163,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-mailchimp',
       options: {
-          endpoint: 'https://gmail.us3.list-manage.com/subscribe/post?u=86e08ce9c277be3d96c78aa11&id=2a6fbb4110',
+        endpoint:
+          'https://gmail.us3.list-manage.com/subscribe/post?u=86e08ce9c277be3d96c78aa11&id=2a6fbb4110',
       },
     },
   ],
