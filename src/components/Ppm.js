@@ -5,14 +5,45 @@ class Ppm extends React.Component {
     ppm: null,
   };
   componentDidMount() {
+    // Try to get stored session data
+    const cachedPpm = JSON.parse(sessionStorage.getItem('sessionObject'));
+
+    // Set 'caching' expiration for session data (in 24h after now)
+    const rightNow = new Date();
+    let expires = new Date();
+    expires.setHours(rightNow.getHours() + 24);
+
+    if (cachedPpm) {
+      // If cache has expired, make a new request
+      if (rightNow.getTime() > cachedPpm.expires) {
+        this.makeRequest(expires);
+      } else {
+        // If cache was still valid, use that object to set state
+        this.setState({
+          ppm: cachedPpm.ppm,
+        });
+      }
+    } else {
+      // If there was no data in session, make a request
+      this.makeRequest(expires);
+    }
+  }
+
+  makeRequest(expires) {
     // TODO: change this and implement your own: https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe
     const proxyurl = 'https://cors-anywhere.herokuapp.com/';
-    fetch(proxyurl + 'http://hqcasanova.com/co2/?callback=process')
+    const url = 'http://hqcasanova.com/co2/?callback=process';
+    fetch(proxyurl + url)
       .then(response => response.text())
       .then(responseText => {
-        console.log(responseText);
+        // Process response as text and clean it since it is dirty
         const text = responseText.replace(/([\(\)]|process)/g, '');
-        console.log(JSON.parse(text));
+        // Create and set new session data
+        const sessionObject = {
+          expires: expires,
+          ppm: JSON.parse(text),
+        };
+        sessionStorage.setItem('sessionObject', JSON.stringify(sessionObject));
         this.setState({
           ppm: JSON.parse(text),
         });
@@ -22,19 +53,18 @@ class Ppm extends React.Component {
       );
   }
   render() {
+    console.log(this.state.ppm);
     let ppm = this.state.ppm;
     return (
-      <div
+      <span
         style={{
-          textAlign: 'right',
-          transition: 'color 0.5s ease-in, background 0.5s ease-in',
-          fontSize: '80%',
+          fontWeight: 'bold',
+          color: this.props.attr === '0' ? '#ff0033' : '',
+          fontSize: this.props.attr === '0' ? '130%' : '',
         }}
       >
-        {null !== ppm
-          ? 'Atmospheric CO2 levels measured today: ' + ppm[0] + ppm.units
-          : ''}
-      </div>
+        {null !== ppm ? ppm[this.props.attr] + ppm.units : ''}
+      </span>
     );
   }
 }
