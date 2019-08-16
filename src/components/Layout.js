@@ -6,7 +6,6 @@ import Helmet from 'react-helmet';
 import { rhythm, scale } from '../utils/typography';
 import sun from '../assets/sun.png';
 import moon from '../assets/moon.png';
-import Ppm from './Ppm';
 
 class Layout extends React.Component {
   state = {
@@ -96,7 +95,7 @@ class Layout extends React.Component {
             marginLeft: 'auto',
             marginRight: 'auto',
             maxWidth: rhythm(24),
-            padding: `1rem ${rhythm(3 / 4)}`,
+            padding: `2.625rem ${rhythm(3 / 4)}`,
           }}
         >
           <header
@@ -104,7 +103,7 @@ class Layout extends React.Component {
               display: 'flex',
               justifyContent: 'space-between',
               alignItems: 'center',
-              marginBottom: '1rem',
+              marginBottom: '2.625rem',
             }}
           >
             {this.renderHeader()}
@@ -141,31 +140,6 @@ class Layout extends React.Component {
               <div style={{ height: '24px' }} />
             )}
           </header>
-          {/* I don't like this: */}
-          {location.pathname === rootPath ? (
-            <a href="#">
-              <div
-                style={{
-                  color: 'var(--textNormal)',
-                  textAlign: 'center  ',
-                  fontSize: '90%',
-                  marginBottom: '1.625rem',
-                  border: '1px solid #ccc',
-                  borderRadius: '16px',
-                  padding: '0.5rem',
-                }}
-              >
-                <div>
-                  CO<sub>2</sub> today: <Ppm attr="0" />
-                </div>
-                <div>
-                  1yr ago: <Ppm attr="1" /> , 10yrs ago: <Ppm attr="10" />
-                </div>
-              </div>
-            </a>
-          ) : (
-            ''
-          )}
 
           {children}
         </div>

@@ -59,8 +59,6 @@ class Ppm extends React.Component {
       <span
         style={{
           fontWeight: 'bold',
-          color: this.props.attr === '0' ? '#ff0033' : '',
-          fontSize: this.props.attr === '0' ? '130%' : '',
         }}
       >
         {null !== ppm ? ppm[this.props.attr] + ppm.units : ''}

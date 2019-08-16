@@ -1,17 +1,18 @@
 import React from 'react';
-//import profilePic from '../assets/profile-pic.jpg';
+import profilePic from '../assets/profile-pic.jpg';
 import { rhythm } from '../utils/typography';
+import Ppm from './Ppm';
 
 class Bio extends React.Component {
   render() {
     return (
       <div
         style={{
-          display: 'block',
+          display: 'flex',
           marginBottom: rhythm(2),
         }}
       >
-        {/* <img
+        <img
           src={profilePic}
           alt={`Gerardo M`}
           style={{
@@ -21,14 +22,11 @@ class Bio extends React.Component {
             height: rhythm(2),
             borderRadius: '50%',
           }}
-        /> */}
-        <p style={{ maxWidth: 310 }}>
-          Personal blog by{' '}
-          <a href="https://mobile.twitter.com/_g3r4">Gerardo M</a>.{' '}
-        </p>
-        <p>
-          You can't go back and change the beginning, but you can start where
-          you are and change how it ends - C.S. Lewis.
+        />
+        <p style={{ maxWidth: 250 }}>
+          A personal blog by{' '}
+          <a href="https://mobile.twitter.com/_g3r4">Gerardo M</a>. CO
+          <sub>2</sub> today: <Ppm attr="0" />
         </p>
       </div>
     );
