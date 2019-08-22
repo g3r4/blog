@@ -16,7 +16,7 @@ From the official git documentation:
 >
 >Note: git revert is used to record some new commits to reverse the effect of some earlier commits (often only a faulty one). If you want to throw away all uncommitted changes in your working directory, you should see `git reset`[1], particularly the `--hard` option. If you want to extract specific files as they were in another commit, you should see `git checkout`[1], specifically the `git checkout <commit> -- <filename>` syntax. Take care with these alternatives as both will discard uncommitted changes in your working directory.
 
-For the purpose of this blog, I would love to translate that previous reference like this:
+For the purpose of this blog, allow me to change that previous reference into something like this:
 
 _Given one or more existing **human induced climate alterations**, revert the changes that the related **decisions** introduce, and record **the actions** that **aliviate** them. This **also requires consistent individual and collective clean action** (no **reset and forget**)._
 
