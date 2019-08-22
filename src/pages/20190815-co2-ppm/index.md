@@ -1,7 +1,7 @@
 ---
 title: Carbon Jargon, 6 Concepts Every Human Needs to Learn
 date: '2019-08-21'
-spoiler: How much carbon dioxide is too much?
+spoiler: How much CO2 is too much?
 ---
 
 ![Power plants and refineries burning fossil fuels](./malcolm-lightbody-4MbiKlr1kgU-unsplash.jpg "Photo by Malcolm Lightbody on Unsplash")
