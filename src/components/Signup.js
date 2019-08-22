@@ -9,6 +9,8 @@ class Signup extends React.Component {
   state = {
     name: null,
     email: null,
+    subscribed: null,
+    err: null
   };
 
   _handleChange = e => {
@@ -30,16 +32,45 @@ class Signup extends React.Component {
         if (result !== 'success') {
           throw msg;
         }
+        else {
+          this.setState({subscribed: "Thank you for Subscribing!"})
+        }
       })
       .catch(err => {
         console.log('err', err);
-        alert(err);
+        //alert(err);
+        this.setState({err})
       });
-
-    toast.notify('Thank you for subscribing!');
   };
 
   render() {
+    const pStyle = {  
+      color: "#3d9970",
+      fontWeight: "bold",
+      fontSize: "115%",
+      martinTop:"28px"
+    } 
+    const button = this.state.subscribed ? <p style={pStyle} > 
+                                              {this.state.subscribed} 
+                                            </p>
+                                         :  <div><button
+                                              data-element="submit"
+                                              className="formkit-submit formkit-submit"
+                                              style={{
+                                                backgroundColor: '#3D9970',
+                                                borderRadius: '24px',
+                                                color: 'white',
+                                                fontWeight: 700,
+                                              }}
+                                            >
+                                              <div className="formkit-spinner" />
+                                              <span>Subscribe</span>
+                                            </button>
+                                            { this.state.err ? <p style={pStyle}> 
+                                                                  {this.state.err} 
+                                                                </p>
+                                                                : ""}
+                                            </div>
     return (
       <form
         onSubmit={this._handleSubmit}
@@ -149,19 +180,7 @@ class Signup extends React.Component {
                   }}
                 />
               </div>
-              <button
-                data-element="submit"
-                className="formkit-submit formkit-submit"
-                style={{
-                  backgroundColor: '#3D9970',
-                  borderRadius: '24px',
-                  color: 'white',
-                  fontWeight: 700,
-                }}
-              >
-                <div className="formkit-spinner" />
-                <span>Subscribe</span>
-              </button>
+              {button}
             </div>
             <div
               data-element="guarantee"
