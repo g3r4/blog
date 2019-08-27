@@ -42,10 +42,10 @@ Drowned cities, stagnant seas, intolerable heatwaves, entire nations uninhabitab
 
 Even though animal agriculture is not the top greenhouse gas contributor, it has many other side effects that make this the cruelest and most destructive force in our planet today:
 
-By causing deforestation (about 91% of Amazon's destruction), our planet's natural capacity to capture CO2 from the atmosphere with trees is diminished, Animal agriculture produces huge amounts of Methane which is 40 times more powerful than CO2 to capture heat and it also requires insane amounts of fresh water. One of the issues that is overlooked a lot of times is the cruelty in which this industry is allowed to operate, but this is a topic for another post.
+By causing deforestation (about 91% of Amazon's destruction), our planet's natural capacity to capture CO2 from the atmosphere with trees is diminished, Animal agriculture produces huge amounts of Methane which is 40 times more powerful than CO2 to capture heat and it also requires insane amounts of fresh water. Another issue that is often overlooked a lot of times is the cruelty in which this industry is allowed to operate, but this is a topic for another post.
 
 ### 5. Ok, How Much Is Too Much Then?
-We are currently at the safe top limit of CO2 in our atmosphere, We've already warmed the Earth by 1.5ºC and some irreversible tipping points have already been reached, like the massive loss of ice sheet all around the planet, even though some of these effects are not reversible, we are still at a point where we can avoid catastrophic damage to our planet. If we get to 4C or about 700 CO2 ppm (and that is the current trend and estimate we will hit within a few decades) we will experience catastrophic collapse of major ecosystems and a huge and irreversible impact to human civilization.
+We are currently at the safe top limit of CO2 in our atmosphere, We've already warmed the Earth by 1.5ºC and some irreversible tipping points have already been reached, like the massive loss of ice sheet all around the planet, even though some of these effects are not reversible, we are still at a point where we can avoid catastrophic damage. If we get to 4C or about 700 CO2 ppm (and that is the current trend and estimate we will hit within a few decades) we will experience catastrophic collapse of major ecosystems and a huge and irreversible impact to human civilization.
 
 
 ### 6. Individual actions you can take to reduce your carbon footprint
